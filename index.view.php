@@ -6,5 +6,12 @@
 </head>
 <body>
   <h1>Staff Panel</h1>
+  <ul>
+  <?php foreach ($employees as $employee) : ?>
+    <li>
+      <?= $employee->getId(); ?> - <?= $employee->getName(); ?> - <?= $employee->getPosition(); ?> - <?= $employee->getExperience(); ?> - <?= $employee->getStatus(); ?>
+    </li>
+  <?php endforeach; ?>
+  </ul>
 </body>
 </html>
