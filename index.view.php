@@ -3,15 +3,65 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Staff Panel</title>
+  <link rel="stylesheet" href="/public/css/style.css">
 </head>
-<body>
-  <h1>Staff Panel</h1>
-  <ul>
-  <?php foreach ($employees as $employee) : ?>
-    <li>
-      <?= $employee->getId(); ?> - <?= $employee->getName(); ?> - <?= $employee->getPosition(); ?> - <?= $employee->getExperience(); ?> - <?= $employee->getStatus(); ?>
-    </li>
-  <?php endforeach; ?>
-  </ul>
+<body class="w-full">
+  <h1 class="w-full">Staff Panel</h1>
+
+  <form class="w-6/12" action="GET" action="/employee">
+    <div class="flex justify-between">
+      <label for="id" required>Id:</label>
+      <input type="number" name="id" required>
+    </div>
+    
+    <div class="flex justify-between">
+      <label for="name">Name:</label>
+      <input type="text" name="name" required>
+    </div>
+    
+    <div class="flex justify-between">
+      <label for="position">Position:</label>
+      <input type="text" name="position" required>
+    </div>
+    
+    <div class="flex justify-between">
+      <label for="experience">Experience:</label>
+      <input type="text" name="experience" required>
+    </div>
+
+    <div class="flex justify-between">
+      <label for="status">Status:</label>
+      <input type="text" name="status" required>
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <div class="w-10/12">
+    <?php foreach ($employees as $employee) : ?>
+      <div class="flex justify-between w-full">
+        <div class="w-1/12">
+          <?= $employee->getId(); ?> 
+        </div>
+
+        <div class="w-3/12">
+          <?= $employee->getName(); ?>
+        </div>
+
+        <div class="w-3/12">
+          <?= $employee->getPosition(); ?>
+        </div>
+
+        <div class="w-1/12">
+          <?= $employee->getExperience(); ?>
+        </div>
+
+        <div class="w-1/12">
+          <?= $employee->getStatus(); ?>
+        </div>
+      </div>
+    <?php endforeach; ?>
+  </div>
+
 </body>
 </html>
