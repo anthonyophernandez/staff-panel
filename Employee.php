@@ -2,11 +2,11 @@
 
 class Employee
 {
-  public $id;
-  public $name;
-  public $position;
-  public $experience;
-  public $status;
+  private $id;
+  private $name;
+  private $position;
+  private $experience;
+  private $status;
 
   public function __construct($id, $name, $position, $experience, $status)
   {

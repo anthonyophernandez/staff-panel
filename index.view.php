@@ -33,10 +33,10 @@
     <button type="submit">Submit</button>
   </form>
 
-  <div class="w-10/12">
+  <div class="w-12/12">
     <?php foreach ($employees as $employee) : ?>
       <div class="flex justify-between w-full">
-        <div class="w-1/12">
+        <div class="w-2/12">
           <?= $employee->getId(); ?> 
         </div>
 
@@ -48,11 +48,11 @@
           <?= $employee->getPosition(); ?>
         </div>
 
-        <div class="w-1/12">
+        <div class="w-2/12">
           <?= $employee->getExperience(); ?>
         </div>
 
-        <div class="w-1/12">
+        <div class="w-2/12">
           <?= $employee->getStatus(); ?>
         </div>
       </div>
