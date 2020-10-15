@@ -2,16 +2,27 @@
 
 require 'Employee.php';
 
-$employees = [
-  new Employee(1, 'John Smith', 'Software Engineer', '2 yrs 1 mo', 'Full-time'),
-  new Employee(2, 'Isabella Everlasting', 'UI/UX Designer', '5 yrs 3 mos', 'Part-time'),
-  new Employee(3, 'Mikhael Zukenberg', 'Frontend Developer', '8 mos', 'Remote'),
-  new Employee(4, 'Sasha Ho', 'Product Manager', '1 yr 9 mos', 'Remote'),
-  new Employee(5, 'Jacob Ginnish', 'Product Manager', '3 yrs 3 mos', 'Full-time'),
-  new Employee(6, 'Loren Spear', 'Software Engineer', '1 yr 1 mo', 'Full-time'),
-  new Employee(7, 'Adam Driver', 'iOS Developer', '2 mos', 'Full-time'),
-  new Employee(8, 'Jordan Lyall', 'Product Manager', '7 yrs 4 mos', 'Remote'),
-  new Employee(9, 'Allison Kuperman', 'HR Manager', '11 yrs 1 mo', 'Full-time')
-];
+require 'config.php';
+
+$host = $config['host'];
+$db   = $config['db'];
+
+$user = $config['user'];
+$pass = $config['pass'];
+
+$charset = $config['charset'];
+$options = $config['options'];
+
+$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+try {
+  $pdo = new \PDO($dsn, $user, $pass, $options);
+} catch (\PDOException $e) {
+  throw new \PDOException($e->getMessage(), (int)$e->getCode());
+}
+
+$statement = $pdo->prepare('select * from employees');
+$statement->execute();
+
+$employees = $statement->fetchAll(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE, 'Employee', array('id', 'name', 'position', 'experience', 'status'));
 
 require 'index.view.php';

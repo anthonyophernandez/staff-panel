@@ -2,11 +2,11 @@
 
 class Employee
 {
-  private $id;
-  private $name;
-  private $position;
-  private $experience;
-  private $status;
+  public $id;
+  public $name;
+  public $position;
+  public $experience;
+  public $status;
 
   public function __construct($id, $name, $position, $experience, $status)
   {
@@ -41,4 +41,6 @@ class Employee
   {
     return $this->status;
   }
+
+  
 }

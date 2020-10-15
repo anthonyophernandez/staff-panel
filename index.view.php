@@ -9,10 +9,6 @@
   <h1 class="w-full">Staff Panel</h1>
 
   <form class="w-6/12" action="GET" action="/employee">
-    <div class="flex justify-between">
-      <label for="id" required>Id:</label>
-      <input type="number" name="id" required>
-    </div>
     
     <div class="flex justify-between">
       <label for="name">Name:</label>
