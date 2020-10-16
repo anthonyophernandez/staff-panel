@@ -41,6 +41,5 @@ class Employee
   {
     return $this->status;
   }
-
   
 }
