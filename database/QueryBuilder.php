@@ -9,10 +9,10 @@ class QueryBuilder
     $this->pdo = $pdo;
   }
 
-  public function selectAll($table, $intoClass)
+  public function selectAll($table, $intoClass, $params)
   {
     $statement = $this->pdo->prepare("select * from {$table}");
     $statement->execute();
-    return $statement->fetchAll(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE, $intoClass, array('id', 'name', 'position', 'experience', 'status'));
+    return $statement->fetchAll(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE, $intoClass, $params);
   }
 }
