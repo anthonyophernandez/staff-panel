@@ -1,7 +1,6 @@
 <?php
 
-$query = require 'bootstrap.php';
+require 'core/bootstrap.php';
 
-$employees = $query->selectAll('employees', 'Employee', array('id', 'name', 'position', 'experience', 'status'));
-
-require 'index.view.php';
+require Router::load('routes.php')
+  ->direct(Request::uri());
