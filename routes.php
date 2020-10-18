@@ -1,5 +1,5 @@
 <?php 
 
-$router->define([
-  '' => 'controllers/index.php'
-]);
+$router->get('', 'controllers/index.php');
+
+$router->post('employee', 'controllers/add-employee.php');

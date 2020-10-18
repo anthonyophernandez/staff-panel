@@ -1,6 +1,6 @@
 <?php
 
-require 'Employee.php';
+require 'core/Employee.php';
 
 $app['config'] = require 'config.php';
 

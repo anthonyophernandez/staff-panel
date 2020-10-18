@@ -8,7 +8,7 @@
 <body class="w-full">
   <h1 class="w-full">Staff Panel</h1>
 
-  <form class="w-6/12" action="GET" action="/employee">
+  <form class="w-6/12" method="POST" action="/employee">
     
     <div class="flex justify-between">
       <label for="name">Name:</label>
