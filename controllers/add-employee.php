@@ -7,9 +7,9 @@ $years = $_POST['years'];
 if (intval($years) == 0) {
   $years = '';
 } elseif (intval($years) == 1) {
-  $years = $years . ' year';
+  $years = $years . ' yr';
 } else {
-  $years = $years . ' years';
+  $years = $years . ' yrs';
 }
 
 $months = $_POST['months'];
@@ -25,12 +25,13 @@ $experience = trim($years . ' ' . $months);
 
 $status = $_POST['status'];
 
+var_dump($name, $position, $experience, $status);
 
-$app['database']->insert('employees', [
-  'name' => $name,
-  'position' => $position,
-  'experience' => $experience,
-  'status' => $status
-]);
+// $app['database']->insert('employees', [
+//   'name' => $name,
+//   'position' => $position,
+//   'experience' => $experience,
+//   'status' => $status
+// ]);
 
-header('Location: /');
+// header('Location: /');
