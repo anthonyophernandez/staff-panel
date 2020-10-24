@@ -5,6 +5,15 @@ $employees = [
   new Employee(1, 'John Doe', 'Software Engineer', '1 yr 2 mos', 'Full-time'),
   new Employee(1, 'John Doe', 'Software Engineer', '1 yr 2 mos', 'Full-time'),
   new Employee(1, 'John Doe', 'Software Engineer', '1 yr 2 mos', 'Full-time'),
+  new Employee(1, 'John Doe', 'Software Engineer', '1 yr 2 mos', 'Full-time'),
+  new Employee(1, 'John Doe', 'Software Engineer', '1 yr 2 mos', 'Full-time'),
+  new Employee(1, 'John Doe', 'Software Engineer', '1 yr 2 mos', 'Full-time'),
+  new Employee(1, 'John Doe', 'Software Engineer', '1 yr 2 mos', 'Full-time'),
+  new Employee(1, 'John Doe', 'Software Engineer', '1 yr 2 mos', 'Full-time'),
+  new Employee(1, 'John Doe', 'Software Engineer', '1 yr 2 mos', 'Full-time'),
+  new Employee(1, 'John Doe', 'Software Engineer', '1 yr 2 mos', 'Full-time'),
+  new Employee(1, 'John Doe', 'Software Engineer', '1 yr 2 mos', 'Full-time'),
+  new Employee(1, 'John Doe', 'Software Engineer', '1 yr 2 mos', 'Full-time'),
   new Employee(1, 'John Doe', 'Software Engineer', '1 yr 2 mos', 'Full-time')
 ];
 

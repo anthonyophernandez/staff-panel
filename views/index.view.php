@@ -19,7 +19,7 @@
       <div class="text-indigo-900 font-bold text-sm w-2/12 p-2">Experience</div>
       <div class="text-indigo-900 font-bold text-sm w-2/12 p-2">Status</div>
     </div>
-    <div class="w-full bg-gray-200">
+    <div class="w-full h-64 overflow-y-auto bg-gray-200">
       <?php foreach ($employees as $employee) : ?>
         <div class="flex justify-between w-full">
           <div class="w-2/12 p-2 text-gray-800">
