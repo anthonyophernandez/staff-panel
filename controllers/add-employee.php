@@ -22,6 +22,7 @@ if (intval($months) == 0) {
 }
 
 $experience = trim($years . ' ' . $months);
+$experience = (strlen($experience) > 0) ? $experience : 'No Experience';
 
 $status = $_POST['status'];
 

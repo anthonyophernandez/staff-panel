@@ -13,16 +13,16 @@
 
   <div class="w-full">
     <div class="flex justify-between w-full">
-      <div class="text-indigo-900 font-bold text-sm w-2/12 p-2">Id</div>
+      <div class="text-indigo-900 font-bold text-sm w-1/12 p-2">Id</div>
       <div class="text-indigo-900 font-bold text-sm w-3/12 p-2">Name</div>
       <div class="text-indigo-900 font-bold text-sm w-3/12 p-2">Position</div>
-      <div class="text-indigo-900 font-bold text-sm w-2/12 p-2">Experience</div>
+      <div class="text-indigo-900 font-bold text-sm w-3/12 p-2">Experience</div>
       <div class="text-indigo-900 font-bold text-sm w-2/12 p-2">Status</div>
     </div>
     <div class="w-full h-64 overflow-y-auto bg-gray-200">
       <?php foreach ($employees as $employee) : ?>
         <div class="flex justify-between w-full">
-          <div class="w-2/12 p-2 text-gray-800">
+          <div class="w-1/12 p-2 text-gray-800">
             <?= $employee->getId(); ?> 
           </div>
 
@@ -34,7 +34,7 @@
             <?= $employee->getPosition(); ?>
           </div>
 
-          <div class="w-2/12 p-2 text-gray-800">
+          <div class="w-3/12 p-2 text-gray-800">
             <?= $employee->getExperience(); ?>
           </div>
 
@@ -73,11 +73,11 @@
     <div class="flex flex-row justify-between w-full my-1">
       <div class="flex flex-column w-6/12">
         <label class="w-full" for="years">Years:</label>
-        <input class="w-12 my-1" type="number" name="years" min="0" max="15" required>
+        <input class="w-12 my-1" type="number" name="years" min="0" max="15" value="0" required>
       </div>
       <div class="flex flex-column w-6/12">
         <label class="w-full" for="months">Months:</label>
-        <input class="w-12 my-1" type="number" name="months" min="0" max="12" required>
+        <input class="w-12 my-1" type="number" name="months" min="0" max="12" value="0" required>
       </div>
     </div>
 
