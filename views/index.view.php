@@ -8,7 +8,7 @@
 <body class="w-full h-screen bg-gray-300">
 
   <header class="bg-indigo-900">
-    <h1 class="text-lg text-white p-2">Staff Panel</h1>
+    <h1 class="text-center text-lg text-white p-2">Staff Panel</h1>
   </header>
 
   <div class="w-full">
@@ -47,10 +47,10 @@
   </div>
   
   <div class="bg-indigo-900">
-    <h2 class="text-lg text-white p-2">Add Employee</h2>
+    <h2 class="text-center text-lg text-white p-2">Add Employee</h2>
   </div>
 
-  <form class="w-64 p-2" method="POST" action="/employee">
+  <form class="w-64 my-2 mx-auto p-2 rounded border border-solid border-indigo-900" method="POST" action="/employee">
     <div class="flex flex-column justify-between w-full my-1">
       <label class="w-full" for="name">Name:</label>
       <input class="w-full my-1" type="text" name="name" required>
@@ -90,7 +90,7 @@
       </select>
     </div>
 
-    <button class="w-24 my-1" type="submit">Submit</button>
+    <button class="cursor-pointer w-24 p-2 my-1 hover:bg-indigo-900 bg-indigo-700 text-white font-bold rounded border border-solid border-indigo-900" type="submit">Submit</button>
   </form>
 </body>
 </html>
