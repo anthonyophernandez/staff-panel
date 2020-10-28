@@ -26,13 +26,11 @@ $experience = (strlen($experience) > 0) ? $experience : 'No Experience';
 
 $status = $_POST['status'];
 
-var_dump($name, $position, $experience, $status);
+$app['database']->insert('employees', [
+  'name' => $name,
+  'position' => $position,
+  'experience' => $experience,
+  'status' => $status
+]);
 
-// $app['database']->insert('employees', [
-//   'name' => $name,
-//   'position' => $position,
-//   'experience' => $experience,
-//   'status' => $status
-// ]);
-
-// header('Location: /');
+header('Location: /');
